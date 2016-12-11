@@ -1,0 +1,127 @@
+{
+  "portfolio" : [
+    {
+      "name": "Tailor Bites",
+      "slug": "tailor-bites",
+      "type": "Design & Development",
+      "main_photo": "../../../static/images/tailorbites/tailorbites.jpg",
+      "photos": [
+        "../../../static/images/tailorbites/tailorbites.jpg",
+        "../../../static/images/tailorbites/tailorbites2.jpg",
+        "../../../static/images/tailorbites/tailorbites3.jpg",
+        "../../../static/images/tailorbites/tailorbites4.jpg"
+      ],
+      "tech": [
+        "javascript",
+        "css3",
+        "html5",
+        "sass",
+        "photoshop",
+        "jquery"
+      ],
+      "desc": "",
+      "url": "http://tailorbites.com"
+    },
+    {
+      "name": "Hoppers, KL v1",
+      "slug": "hoppers-v1",
+      "type": "Design & Development",
+      "main_photo": "../../../static/images/hoppers-v1/hoppers.jpg",
+      "photos": [
+        "../../../static/images/hoppers-v1/hoppers.jpg",
+        "../../../static/images/hoppers-v1/hoppers1.jpg",
+        "../../../static/images/hoppers-v1/hoppers2.jpg",
+        "../../../static/images/hoppers-v1/hoppers3.jpg"
+      ],
+      "tech": [
+        "javascript",
+        "css3",
+        "html5",
+        "photoshop",
+        "jquery"
+      ],
+      "desc": "",
+      "url": "#"
+    },
+    {
+      "name": "Wordpress Gaming News Theme",
+      "slug": "gaming-news",
+      "type": "Design & Development",
+      "main_photo": "../../../static/images/gaming/gaming.jpg",
+      "photos": [
+        "../../../static/images/gaming/gaming.jpg",
+        "../../../static/images/gaming/gaming1.jpg"
+      ],
+      "tech": [
+        "javascript",
+        "css3",
+        "html5",
+        "photoshop",
+        "sass",
+        "wordpress"
+      ],
+      "desc": "WIP",
+      "url": "#"
+    },
+    {
+      "name": "Hoppers, KL v2",
+      "slug": "hoppers-v2",
+      "type": "Design & Development",
+      "main_photo": "../../../static/images/hoppers-v2/hoppers.jpg",
+      "photos": [
+        "../../../static/images/hoppers-v2/hoppers.jpg",
+        "../../../static/images/hoppers-v2/hoppers1.jpg",
+        "../../../static/images/hoppers-v2/hoppers2.jpg",
+        "../../../static/images/hoppers-v2/hoppers3.jpg"
+      ],
+      "tech": [
+        "javascript",
+        "css3",
+        "html5",
+        "photoshop",
+        "sass"
+      ],
+      "desc": "Built using Vue.js",
+      "url": "http://hopperskl.com"
+    },
+    {
+      "name": "Unveil",
+      "slug": "unveil",
+      "type": "Design & Development",
+      "main_photo": "../../../static/images/unveil/unveil.jpg",
+      "photos": [
+        "../../../static/images/unveil/unveil.jpg",
+        "../../../static/images/unveil/unveil1.jpg",
+        "../../../static/images/unveil/unveil2.jpg"
+      ],
+      "tech": [
+        "javascript",
+        "css3",
+        "html5",
+        "photoshop",
+        "sass",
+        "react"
+      ],
+      "desc": "Built using React",
+      "url": "http://unveilatelier.com"
+    },
+    {
+      "name": "RivalTide",
+      "slug": "rivaltide",
+      "type": "Design & Development",
+      "main_photo": "../../../static/images/rivaltide/rivaltide.jpg",
+      "photos": [
+        "../../../static/images/rivaltide/rivaltide.jpg"
+      ],
+      "tech": [
+        "javascript",
+        "css3",
+        "html5",
+        "photoshop",
+        "wordpress"
+      ],
+      "desc": "Full WordPress theme for a Gaming news and review site.",
+      "url": "#"
+    }
+  ]
+}
