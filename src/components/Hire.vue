@@ -18,16 +18,24 @@
       </div><!--
    --><div class="hire-right">
          <p>
-           <label class="animated fadeIn">Name</label>
-           <input type="text" class="animated fadeIn" />
+           <div id="success" v-bind:class="{ active: success }">
+             {{success}}
+           </div>
+           <div id="error" v-bind:class="{ active: error }">
+             {{error}}
+           </div>
+           <form v-on:submit="sendEmail">
+             <label class="animated fadeIn">Name</label>
+             <input type="text" id="name" v-model="name" class="animated fadeIn" />
 
-           <label class="animated fadeIn">Email</label>
-           <input type="text" class="animated fadeIn" />
+             <label class="animated fadeIn">Email</label>
+             <input type="text" id="email" v-model="email" class="animated fadeIn" />
 
-           <label class="animated fadeIn">Message</label>
-           <textarea type="text" rows="6" class="animated fadeIn"></textarea>
+             <label class="animated fadeIn">Message</label>
+             <textarea type="text" id="message" v-model="message" rows="6" class="animated fadeIn"></textarea>
 
-           <button type="submit" class="animated fadeIn">Send</button>
+             <button type="submit" class="animated fadeIn">Send</button>
+           </form>
          </p>
       </div>
     </div>
@@ -37,12 +45,58 @@
 <script>
 import Vue from 'vue'
 import TopNav from './TopNav'
+import request from 'superagent'
 Vue.component('TopNav', TopNav)
 
 export default {
   name: 'hire',
   data () {
     return {
+      error: '',
+      success: '',
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    }
+  },
+  methods: {
+    sendEmail: function (event) {
+      event.preventDefault()
+
+      let name = event.target[0].value
+      let email = event.target[1].value
+      let message = event.target[2].value
+
+      request
+        .post('/send/')
+        .send({ name, email, message })
+        .set('Accept', 'application/json')
+        .end(function (err, res) {
+          if (err) {
+            console.log(err)
+            this.error = 'Something went wrong'
+          } else {
+            this.error = ''
+            this.success = ''
+            var code = res.text
+            if (code.includes('name_req')) {
+              this.error = 'Name is Required'
+            } else if (code.includes('email_req')) {
+              this.error = 'Email is Required'
+            } else if (code.includes('email_inv')) {
+              this.error = 'Email is Invalid'
+            } else if (code.includes('message_req')) {
+              this.error = 'Message is Required'
+            } else if (code === '{"success":"sent"}') {
+              this.error = ''
+              this.success = 'Email Sent'
+              this.name = ''
+              this.email = ''
+              this.message = ''
+            }
+          }
+        }.bind(this))
     }
   }
 }
@@ -105,6 +159,101 @@ export default {
         @media screen and (max-width: 750px)
           width: 100%
           display: block
+        #error
+          background: rgba(255,0,0,.6)
+          color: #fff
+          opacity: 0
+          width: 100%
+          max-width: 350px
+          margin: 0 auto 15px
+          padding: 10px
+          border-radius: 4px
+          display: none
+          transition: .3s
+          &.active
+            display: block
+            opacity: 1
+        #success
+          background: rgba(100,255,100,.6)
+          opacity: 0
+          width: 100%
+          max-width: 350px
+          margin: 0 auto 15px
+          padding: 10px
+          border-radius: 4px
+          display: none
+          transition: .3s
+          &.active
+            display: block
+            opacity: 1
+        form
+          display: block
+          label
+            width: 100%
+            max-width: 350px
+            display: block
+            margin: 0 auto
+            padding: 0px 0 7px
+            text-align: left
+            animation-delay: .3s
+          input
+            width: 100%
+            max-width: 350px
+            padding: 15px
+            margin-bottom: 20px
+            color: #348F50
+            border: 0
+            @include large-boxshadow()
+            outline: 2px solid rgba(255,255,255,0)
+            transition: .4s
+            animation-duration: .3s
+            animation-delay: .4s
+            &:nth-child(4)
+              animation-duration: .4s
+              animation-delay: .5s
+            &:focus
+              outline: 2px solid #56B4D3
+              outline-offset: 0
+              @include long-boxshadow()
+          textarea
+            width: 100%
+            max-width: 350px
+            padding: 15px
+            color: #348F50
+            border: 0
+            @include large-boxshadow()
+            outline: 2px solid rgba(255,255,255,0)
+            transition: .4s
+            animation-duration: .5s
+            animation-delay: .6s
+            &:focus
+              outline: 2px solid #56B4D3
+              outline-offset: 0
+              @include long-boxshadow()
+          button
+            display: block
+            width: 100%
+            max-width: 350px
+            padding: 12px
+            margin: 10px auto 0
+            border: 3px solid #fff
+            border-radius: 3px
+            background-color: rgba(255,255,255,0)
+            color: #fff
+            font-size: 18px
+            font-weight: 300
+            font-family: $font2
+            text-transform: uppercase
+            animation-duration: .6s
+            animation-delay: .8s
+            @include large-boxshadow()
+            transition: .2s
+            &:hover
+              cursor: pointer
+              font-weight: 400
+              background-color: rgba(255,255,255,1)
+              color: #56B4D3
+              @include long-boxshadow()
     h1
       text-align: center
       display: block
@@ -151,71 +300,5 @@ export default {
         display: block
         margin: 0 auto
         text-align: justify
-      label
-        width: 100%
-        max-width: 350px
-        display: block
-        margin: 0 auto
-        padding: 0px 0 7px
-        text-align: left
-        animation-delay: .3s
-      input
-        width: 100%
-        max-width: 350px
-        padding: 15px
-        margin-bottom: 20px
-        color: #348F50
-        border: 0
-        @include large-boxshadow()
-        outline: 2px solid rgba(255,255,255,0)
-        transition: .4s
-        animation-duration: .3s
-        animation-delay: .4s
-        &:nth-child(4)
-          animation-duration: .4s
-          animation-delay: .5s
-        &:focus
-          outline: 2px solid #56B4D3
-          outline-offset: 0
-          @include long-boxshadow()
-      textarea
-        width: 100%
-        max-width: 350px
-        padding: 15px
-        color: #348F50
-        border: 0
-        @include large-boxshadow()
-        outline: 2px solid rgba(255,255,255,0)
-        transition: .4s
-        animation-duration: .5s
-        animation-delay: .6s
-        &:focus
-          outline: 2px solid #56B4D3
-          outline-offset: 0
-          @include long-boxshadow()
-      button
-        display: block
-        width: 100%
-        max-width: 350px
-        padding: 12px
-        margin: 10px auto 0
-        border: 3px solid #fff
-        border-radius: 3px
-        background-color: rgba(255,255,255,0)
-        color: #fff
-        font-size: 18px
-        font-weight: 300
-        font-family: $font2
-        text-transform: uppercase
-        animation-duration: .6s
-        animation-delay: .8s
-        @include large-boxshadow()
-        transition: .2s
-        &:hover
-          cursor: pointer
-          font-weight: 400
-          background-color: rgba(255,255,255,1)
-          color: #56B4D3
-          @include long-boxshadow()
 
 </style>
