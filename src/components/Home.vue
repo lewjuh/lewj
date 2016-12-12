@@ -4,9 +4,13 @@
       <div class="title-wrap">
         <h1 class="animated zoomIn">lewj</h1>
         <h2 class="animated zoomIn">Front-End Developer</h2>
-        <router-link to="/about" class="animated zoomIn">About</router-link>
-        <router-link to="/projects" class="animated zoomIn">Projects</router-link>
-        <router-link to="/hire" class="animated zoomIn">Hire Me</router-link>
+        <router-link to="/about" class="nav-link animated zoomIn">About</router-link>
+        <router-link to="/projects" class="nav-link animated zoomIn">Projects</router-link>
+        <router-link to="/hire" class="nav-link animated zoomIn">Hire Me</router-link>
+        <div class="social">
+          <a href="https://dribbble.com/LewJ" target="_blank"><i class="icon ion-social-dribbble" aria-hidden="true"></i></a>
+          <a href="https://github.com/lewjuh" target="_blank"><i class="icon ion-social-github" aria-hidden="true"></i></a>
+        </div>
       </div>
     </div>
   </div>
@@ -72,7 +76,7 @@ export default {
           font-size: 38px
         @media screen and (max-width: 385px)
           font-size: 32px
-      a
+      .nav-link
         font-family: $font2
         display: inline-block
         border: 1px solid #fff
@@ -104,4 +108,24 @@ export default {
         @media screen and (max-width: 385px)
           font-size: 16px
           padding: 10px 10px
+      .social
+        display: block
+        width: 100%
+        padding-top: 20px
+        a
+          color: #fff
+          font-size: 36px
+          vertical-align: top
+          display: inline-block
+          line-height: 50px
+          text-align: center
+          transition: color .15s
+          &:hover
+            color: $third
+          &:first-child
+            padding-top: 2px
+            margin-right: 15px
+            margin-left: 4px
+          .ion-social-github
+            font-size: 31px
 </style>
