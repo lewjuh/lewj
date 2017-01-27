@@ -2,11 +2,14 @@
   <div class="projects-page">
     <TopNav />
     <div class="projects-wrap">
+      <div class="icon_header animated zoomIn">
+        <span class="lnr lnr-laptop-phone"></span>
+      </div>
       <h1 class="animated zoomIn">Projects</h1>
 
       <div class="projects">
 
-        <router-link v-for="(item, index) in portfolio" :to="'/projects/'+item.slug" class="animated zoomIn">
+        <router-link v-for="(item, index) in portfolio" :to="'/project/'+item.slug" class="animated zoomIn">
           <div class="project">
             <div class="hover">
               <h4>{{ item.name }}</h4>
@@ -18,6 +21,7 @@
 
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -25,6 +29,9 @@
 import Vue from 'vue'
 import TopNav from './TopNav'
 Vue.component('TopNav', TopNav)
+
+import Footer from './Footer'
+Vue.component('Footer', Footer)
 
 export default {
   name: 'projects',
@@ -48,7 +55,6 @@ export default {
   @import '../scss/mixins.scss'
 
   .projects-page
-    background: $gradient4
     position: absolute
     top: 0
     left: 0
@@ -60,6 +66,10 @@ export default {
     align-items: center
     flex-wrap: wrap
     padding-top: 75px
+    padding-bottom: 75px
+    .icon_header
+      font-size: 56px
+      text-align: center
     .projects-wrap
       width: 85%
       text-align: center

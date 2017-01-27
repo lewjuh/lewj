@@ -2,6 +2,9 @@
   <div class="hire">
     <TopNav />
     <div class="hire-wrap">
+      <div class="icon_header animated zoomIn">
+        <span class="lnr lnr-envelope"></span>
+      </div>
       <h1 class="animated zoomIn">Hire Me</h1>
       <div class="hire-left animated fadeIn">
         <p class="lead animated fadeIn">
@@ -9,10 +12,10 @@
         </p>
         <ul class="animated fadeIn">
           <li>
-            <i class="icon ion-ios-location-outline"></i> Manchester / Cambridge, UK
+            <i class="lnr lnr-map-marker"></i> Manchester / Cambridge, UK
           </li>
           <li>
-            <i class="icon ion-ios-email-outline"></i> lew[at]lewj.me
+            <i class="lnr lnr-envelope"></i> <a href="mailto:lew@lewj.me">lew[at]lewj.me</a>
           </li>
         </ul>
       </div><!--
@@ -39,6 +42,7 @@
          </p>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -47,6 +51,9 @@ import Vue from 'vue'
 import TopNav from './TopNav'
 import request from 'superagent'
 Vue.component('TopNav', TopNav)
+
+import Footer from './Footer'
+Vue.component('Footer', Footer)
 
 export default {
   name: 'hire',
@@ -107,7 +114,6 @@ export default {
   @import '../scss/mixins.scss'
 
   .hire
-    background: $gradient3
     position: absolute
     top: 0
     left: 0
@@ -118,8 +124,20 @@ export default {
     justify-content: center
     align-items: center
     flex-wrap: wrap
-    @media screen and (max-width: 800px)
-      padding-top: 75px
+    padding-top: 75px
+    padding-bottom: 75px
+    .icon_header
+      font-size: 56px
+      text-align: center
+    a
+      color: #fff
+      display: inline-block
+      text-decoration: none
+      border-bottom: 1px solid #fff
+      transition: .3s
+      &:hover
+        color: rgba(0,0,0,.7)
+        border-bottom: 1px solid rgba(0,0,0,.7)
     .hire-wrap
       max-width: 950px
       width: 100%
@@ -140,16 +158,20 @@ export default {
           width: 100%
           max-width: 350px
           margin: 15px auto
-          letter-spacing: .5px
-          line-height: 1.5
+          letter-spacing: 1.5px
+          line-height: 1.8
           font-weight: 300
           font-size: 18px
+          @media screen and (max-width: 345px)
+            letter-spacing: 1.2px
+            font-size: 16px
           li
             margin-bottom: 5px
             i
               font-size: 28px
               vertical-align: middle
               width: 30px
+              margin-right: 10px
               display: inline-block
               text-align: center
       .hire-right
@@ -289,8 +311,8 @@ export default {
       width: 100%
       margin: 0 auto 10px
       font-size: 18px
-      letter-spacing: .5px
-      line-height: 1.5
+      letter-spacing: 1.5px
+      line-height: 1.6
       font-weight: 300
       animation-duration: .5s
       animation-delay: .2s

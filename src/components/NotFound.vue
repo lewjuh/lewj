@@ -3,37 +3,15 @@
     <TopNav />
     <div class="about-wrap">
       <div class="icon_header animated zoomIn">
-        <span class="lnr lnr-license"></span>
+        <span class="lnr lnr-warning"></span>
       </div>
-      <h1 class="animated zoomIn">About Me</h1>
-      <p  class="animated fadeIn">
-        Hi! I'm Lew, a front-end developer (and sometimes designer) based in Cambridgeshire, UK. I have over 6 years experience developing with Javascript, CSS3, HTML5 and php. Through the years I've learned a number of frameworks including jQuery, WordPress, React, Vue.js (this site is built with Vue), Meteor and various others. Below you can see the things I'm most competent in, as well a list of things that im currently learning. If you wish to see more work and/or projects that I have been a front-end developer on, please <router-link to="/hire/">get in touch</router-link> and I can supply more information!
+      <h1 class="animated zoomIn">404 Page Not Found</h1>
+      <p class="animated fadeIn">
+        Uh oh! I couldn't seem to find the page you were looking for!
       </p>
-      <h3 class="animated zoomIn">Things I <i class="icon ion-ios-heart-outline"></i> Using</h3>
-      <div class="icon_row animated fadeIn">
-        <i class="devicons devicons-javascript animated fadeIn"><div class="tooltip">JavaScript</div></i>
-        <i class="devicons devicons-css3 animated fadeIn"><div class="tooltip">CSS3</div></i>
-        <i class="devicons devicons-html5 animated fadeIn"><div class="tooltip">HTML5</div></i>
-        <i class="devicons devicons-php animated fadeIn"><div class="tooltip">php</div></i>
-        <i class="devicons devicons-nodejs_small animated fadeIn"><div class="tooltip">nodejs</div></i>
-        <i class="devicons devicons-sass animated fadeIn"><div class="tooltip">sass</div></i>
-        <i class="devicons devicons-react animated fadeIn"><div class="tooltip">React</div></i>
-        <i class="devicons devicons-git animated fadeIn"><div class="tooltip">git</div></i>
-        <i class="devicons devicons-meteor animated fadeIn"><div class="tooltip">Meteor</div></i>
-        <i class="devicons devicons-wordpress animated fadeIn"><div class="tooltip">WordPress</div></i>
-        <i class="devicons devicons-mongodb animated fadeIn"><div class="tooltip">mongodb</div></i>
-        <i class="devicons devicons-mysql animated fadeIn"><div class="tooltip">MySQL</div></i>
-        <i class="devicons devicons-photoshop animated fadeIn"><div class="tooltip">Photoshop</div></i>
-        <i class="devicons devicons-bootstrap animated fadeIn"><div class="tooltip">Bootstrap</div></i>
-        <i class="devicons devicons-jquery animated fadeIn"><div class="tooltip">Jquery</div></i>
-      </div>
-      <h3 class="animated zoomIn delay">Things I'm Learning</h3>
-      <div class="icon_row animated fadeIn delay">
-        <i class="devicons devicons-python animated fadeIn"><div class="tooltip">Python</div></i>
-        <i class="devicons devicons-django animated fadeIn"><div class="tooltip">django</div></i>
-        <i class="devicons devicons-laravel animated fadeIn"><div class="tooltip">Laravel</div></i>
-        <i class="devicons devicons-swift animated fadeIn"><div class="tooltip">Swift</div></i>
-      </div>
+      <p class="animated fadeIn">
+        <router-link to="/">Click here</router-link> to return back home.
+      </p>
     </div>
     <Footer />
   </div>
@@ -48,7 +26,7 @@ import Footer from './Footer'
 Vue.component('Footer', Footer)
 
 export default {
-  name: 'about',
+  name: 'NotFound',
   data () {
     return {
     }
@@ -70,8 +48,8 @@ export default {
     justify-content: center
     align-items: center
     flex-wrap: wrap
-    padding-top: 75px
-    padding-bottom: 75px
+    @media screen and (max-width: 800px)
+      padding-top: 75px
     .icon_header
       font-size: 56px
       text-align: center
@@ -116,21 +94,14 @@ export default {
         animation-delay: .6s
     p
       width: 90%
-      margin: 0 auto 45px
+      margin: 0 auto 15px
       font-size: 18px
       letter-spacing: 1.9px
       line-height: 1.8
       font-weight: 300
       animation-delay: .4s
       animation-duration: .5s
-      text-align: left
-      @media screen and (max-width: 650px)
-        letter-spacing: 1.7px
-        line-height: 1.5
-      @media screen and (max-width: 485px)
-        letter-spacing: 1.5px
-        line-height: 1.5
-        font-size: 16px
+      text-align: center
       a
         color: #fff
         display: inline-block

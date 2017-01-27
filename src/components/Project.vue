@@ -2,7 +2,7 @@
   <div class="project">
     <TopNav />
     <div v-if="portfolio.name" class="inner_wrap">
-      <h1 class="animated zoomIn"><router-link to="/projects" class="back_button"><i class="icon ion-ios-arrow-left"></i></router-link><span  v-cloak>{{portfolio.name}}</span></h1>
+      <h1 class="animated zoomIn"><router-link to="/projects" class="back_button"><i class="lnr lnr-chevron-left"></i></router-link><span  v-cloak>{{portfolio.name}}</span></h1>
       <Slider class="images animated zoomIn" v-bind:photos="portfolio.photos"></Slider>
       <div class="technologies">
         <i v-for="(tech, index) in portfolio.tech" :class="'devicons devicons-'+tech+' animated fadeIn'"><div class="tooltip">{{tech}}</div></i>
@@ -14,6 +14,7 @@
         {{portfolio.desc}}
       </p>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -21,11 +22,14 @@
 import Vue from 'vue'
 import _ from 'underscore'
 
-import TopNav from '../TopNav'
+import TopNav from './TopNav'
 Vue.component('TopNav', TopNav)
 
-import Slider from '../Slider'
+import Slider from './Slider'
 Vue.component('Slider', Slider)
+
+import Footer from './Footer'
+Vue.component('Footer', Footer)
 
 export default {
   name: 'project',
@@ -46,14 +50,13 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  @import '../../scss/vars.scss'
-  @import '../../scss/mixins.scss'
+  @import './../scss/vars.scss'
+  @import './../scss/mixins.scss'
 
   [v-cloak]
     display: none
 
   .project
-    background: $gradient2
     position: absolute
     top: 0
     left: 0
@@ -65,6 +68,7 @@ export default {
     align-items: center
     flex-wrap: wrap
     padding-top: 75px
+    padding-bottom: 75px
     .inner_wrap
       width: 100%
       max-width: 800px
@@ -82,27 +86,28 @@ export default {
       animation-duration: .5s
       .back_button
         color: #fff
-        font-size: 33px
+        font-size: 24px
         text-align: center
         animation-delay: .4s
         margin: 0 auto 10px
         padding: 0
         width: 50px
         height: 50px
-        border-radius: 3px
+        border-radius: 50%
         transition: .2s
         vertical-align: middle
-        border: 1px solid #fff
+        border: 2px solid #fff
         display: block
         position: relative
         i
           display: block
           position: absolute
           top: 50%
-          left: 50%
+          left: 47%
           transform: translate(-50%,-50%)
         &:hover
-          color: $secondary
+          color: rgba(0,0,0,.6)
+          border: 2px solid rgba(0,0,0,.6)
       span
         display: inline-block
         vertical-align: middle
@@ -167,6 +172,8 @@ export default {
       animation-delay: .4s
       @media screen and (max-width: 800px)
         padding-right: 20px
+      @media screen and (max-width: 415px)
+        width: 100%
       a
         color: #fff
         display: inline-block
@@ -175,6 +182,7 @@ export default {
         text-decoration: none
         border-radius: 2px
         transition: .15s
+        border: 2px solid #fff
         &:hover
           color: $primary
           background: #fff
@@ -191,7 +199,9 @@ export default {
       vertical-align: top
       @media screen and (max-width: 800px)
         padding-left: 20px
-        padding-right: 40px;
+        padding-right: 40px
+      @media screen and (max-width: 415px)
+        width: 100%
       i
         margin: 0 5px 35px
         position: relative

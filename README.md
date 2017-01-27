@@ -1,27 +1,31 @@
 # lewj
 
-> lewj portfolio
+> Personal Portfolio https://www.lewj.me
+
+## Technologies
+
+- Front-end
+  - Built using the Vue.js framework
+  - Styled using Sass
+
+- Backend
+  - Served by Express
+
+- Hosted on Heroku
+- SSL by Lets Encrypt
+
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn run dev
 
 # build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+yarn run build
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+` No tests, I'm so sorry :( `

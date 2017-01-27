@@ -5,10 +5,10 @@
         <img :src="photo" class="slide_img"  v-bind:style="{ height: imgWidth + 'px', width: imgWidth + 'px' }" />
       </li>
     </ul>
-    <div class="prev" v-on:click="prevSlide()">
+    <div v-if="amount > 1" class="prev" v-on:click="prevSlide()">
       <i class="icon ion-ios-arrow-left"> </i>
     </div>
-    <div class="next" v-on:click="nextSlide()">
+    <div v-if="amount > 1" class="next" v-on:click="nextSlide()">
       <i class="icon ion-ios-arrow-right"> </i>
     </div>
   </div>

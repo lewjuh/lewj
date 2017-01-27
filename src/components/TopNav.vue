@@ -1,19 +1,19 @@
 <template>
   <div :class="top ? 'top-nav darken' : 'top-nav'" ref="topNav">
-    <router-link to="/" class="home-link"><i class="icon ion-ios-home-outline"></i></router-link>
+    <router-link to="/" class="home-link"><i class="lnr lnr-home"></i></router-link>
     <div class="title">
       lewj
     </div>
     <div class="top-right-nav">
-      <router-link to="/about">About</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link to="/hire">Hire Me</router-link>
+      <router-link to="/about"><span class="lnr lnr-license"></span> <span>About</span></router-link>
+      <router-link to="/projects"><span class="lnr lnr-laptop-phone"></span> <span>Projects</span></router-link>
+      <router-link to="/hire"><i class="lnr lnr-envelope"></i> <span>Hire Me</span></router-link>
     </div>
     <div class="top-right-nav-mob">
-      <button class="mob-nav-btn" v-on:click="mobNavToggle"><i class="icon ion-navicon-round"></i></button>
+      <button class="mob-nav-btn" v-on:click="mobNavToggle"><i class="lnr lnr-menu"></i></button>
     </div>
     <div class="mob-nav" v-bind:class="{ active: mobNav }">
-      <button class="mob-close" v-on:click="mobNavToggle"><i class="icon ion-ios-close-empty"></i></button>
+      <button class="mob-close" v-on:click="mobNavToggle"><i class="lnr lnr-cross"></i></button>
       <router-link to="/about" class="animated" v-bind:class="{ zoomIn: mobNav }">About</router-link>
       <router-link to="/projects" class="animated" v-bind:class="{ zoomIn: mobNav }">Projects</router-link>
       <router-link to="/hire" class="animated" v-bind:class="{ zoomIn: mobNav }">Hire Me</router-link>
@@ -86,6 +86,11 @@ export default {
         text-decoration: none
         border-radius: 3px
         transition: .2s
+        text-transform: uppercase
+        font-size: 14px
+        span
+          display: inline-block
+          vertical-align: middle
         &:hover
           border: 1px solid rgba(0,0,0,.7)
           color: rgba(0,0,0,.7)
@@ -188,6 +193,7 @@ export default {
       font-size: 36px
       transition: .2s
       z-index: 10000
+      text-decoration: none
       &:hover
         color: rgba(0,0,0,.7)
 </style>
