@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <span class="copy_text">&copy; COPYRIGHT LEWJ.ME 2017</span> <a href="/" class="source_text"><span class="lnr lnr-code"></span> <span>VIEW SOURCE</span></a>
+    <span class="copy_text">&copy; COPYRIGHT LEWJ.ME 2017</span> <a href="https://github.com/lewjuh/lewj" target="_blank" class="source_text"><span class="lnr lnr-code"></span> <span>VIEW SOURCE</span></a>
   </div>
 </template>
 
