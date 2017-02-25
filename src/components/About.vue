@@ -16,16 +16,16 @@
         <i class="devicons devicons-html5 animated fadeIn"><div class="tooltip">HTML5</div></i>
         <i class="devicons devicons-php animated fadeIn"><div class="tooltip">php</div></i>
         <i class="devicons devicons-nodejs_small animated fadeIn"><div class="tooltip">nodejs</div></i>
-        <i class="devicons devicons-sass animated fadeIn"><div class="tooltip">sass</div></i>
+        <i class="devicons devicons-sass animated fadeIn"><div class="tooltip">Sass</div></i>
         <i class="devicons devicons-react animated fadeIn"><div class="tooltip">React</div></i>
-        <i class="devicons devicons-git animated fadeIn"><div class="tooltip">git</div></i>
         <i class="devicons devicons-meteor animated fadeIn"><div class="tooltip">Meteor</div></i>
         <i class="devicons devicons-wordpress animated fadeIn"><div class="tooltip">WordPress</div></i>
         <i class="devicons devicons-mongodb animated fadeIn"><div class="tooltip">mongodb</div></i>
         <i class="devicons devicons-mysql animated fadeIn"><div class="tooltip">MySQL</div></i>
-        <i class="devicons devicons-photoshop animated fadeIn"><div class="tooltip">Photoshop</div></i>
         <i class="devicons devicons-bootstrap animated fadeIn"><div class="tooltip">Bootstrap</div></i>
         <i class="devicons devicons-jquery animated fadeIn"><div class="tooltip">Jquery</div></i>
+        <i class="devicons devicons-git animated fadeIn"><div class="tooltip">git</div></i>
+        <i class="devicons devicons-atom animated fadeIn"><div class="tooltip">Atom</div></i>
       </div>
       <h3 class="animated zoomIn delay">Things I'm Learning</h3>
       <div class="icon_row animated fadeIn delay">

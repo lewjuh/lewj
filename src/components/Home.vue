@@ -10,6 +10,7 @@
         <div class="social">
           <a href="https://dribbble.com/LewJ" target="_blank" class="animated zoomIn"><i class="icon ion-social-dribbble" aria-hidden="true"></i></a>
           <a href="https://github.com/lewjuh" target="_blank" class="animated zoomIn"><i class="icon ion-social-github" aria-hidden="true"></i></a>
+          <a href="https://codepen.io/lewj/" target="_blank" class="animated zoomIn"><i class="icon ion-social-codepen-outline" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -143,6 +144,11 @@ export default {
             animation-delay: .6s
           &:nth-child(2)
             animation-delay: .7s
+            margin-right: 15px
+            margin-left: 4px
+          &:nth-child(3)
+            padding-top: 2px
+            animation-delay: .8s
           .ion-social-github
             font-size: 31px
 </style>
