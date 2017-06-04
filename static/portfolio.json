@@ -1,5 +1,22 @@
 {
-  "portfolio" : [
+  "portfolio": [{
+      "name": "YouTube Dark",
+      "slug": "youtube-dark",
+      "type": "Chrome Extension",
+      "main_photo": "../../../static/images/youtube-dark/youtube-dark.jpg",
+      "photos": [
+        "../../../static/images/youtube-dark/youtube-dark.jpg",
+        "../../../static/images/youtube-dark/youtube-dark1.jpg",
+        "../../../static/images/youtube-dark/youtube-dark2.jpg"
+      ],
+      "tech": [
+        "javascript",
+        "css3",
+        "html5"
+      ],
+      "desc": "YouTube Dark is a chrome extension with the sole purpose of providing a dark theme toggle for the user. It also features a toggle to show or hide comments.",
+      "url": "https://chrome.google.com/webstore/detail/youtube-dark/plglhpmdnpckcegcdioefjiojlmopmnk"
+    },
     {
       "name": "Tailor Bites",
       "slug": "tailor-bites",
