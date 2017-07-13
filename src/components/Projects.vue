@@ -94,6 +94,12 @@ export default {
             animation-delay: .9s
           &:nth-child(7)
             animation-delay: 1s
+          &:nth-child(8)
+            animation-delay: 1.1s
+          &:nth-child(9)
+            animation-delay: 1.2s
+          &:nth-child(10)
+            animation-delay: 1.3s
         .project
           max-width: 350px
           max-height: 350px

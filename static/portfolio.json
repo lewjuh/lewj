@@ -1,5 +1,20 @@
 {
   "portfolio": [{
+      "name": "Dev Helpers",
+      "slug": "dev-helpers",
+      "type": "Chrome Extension",
+      "main_photo": "../../../static/images/dev-helpers/dev-helpers.jpg",
+      "photos": [
+        "../../../static/images/dev-helpers/dev-helpers.jpg"
+      ],
+      "tech": [
+        "javascript",
+        "css3",
+        "html5"
+      ],
+      "desc": "Simple CSS/JS Helpers to inject code snippets into websites. Handy for developers who need to get around things temporarily.",
+      "url": "https://chrome.google.com/webstore/detail/dev-helpers/jjobljeheboinnjikhblcdejalnlolgl?hl=en-US&gl=GB"
+    }, {
       "name": "YouTube Dark",
       "slug": "youtube-dark",
       "type": "Chrome Extension",
