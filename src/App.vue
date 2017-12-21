@@ -62,29 +62,29 @@ export default {
 }
 </script>
 
-<style lang="sass">
-  @import './scss/vars.scss'
-  @import './assets/icons/css/devicons.min.css'
-  @import './../node_modules/normalize.css/normalize.css'
-  @import './../node_modules/animate.css/animate.min.css'
-
-  .fade-enter-active, .fade-leave-active
-    transition: opacity .3s
-  .fade-enter, .fade-leave-active
-    opacity: 0
-
-
-  body
-    margin: 0
-    padding: 0
-    font-family: $font2
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    background-color: rgba(92,37,141,1)
-    &.addTransition
-      transition: background-color 3s ease-in-out
-
-  div, p, a, input, textarea, h1, h2
-    box-sizing: border-box
-
+<style lang="scss">
+  @import './scss/vars.scss';
+  @import './assets/icons/css/devicon.min.css';
+  @import './../node_modules/normalize.css/normalize.css';
+  @import './../node_modules/animate.css/animate.min.css';
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .3s;
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: $font2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgba(92,37,141,1);
+    &.addTransition {
+      transition: background-color 3s ease-in-out;
+    }
+  }
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
 </style>

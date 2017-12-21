@@ -1,0 +1,46 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 21/12/2017 00:35
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./fonts/Flaticon.eot");
+  src: url("./fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./fonts/Flaticon.woff") format("woff"),
+       url("./fonts/Flaticon.ttf") format("truetype"),
+       url("./fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.flaticon-twitter:before { content: "\f100"; }
+.flaticon-codepen:before { content: "\f101"; }
+.flaticon-github:before { content: "\f102"; }
+.flaticon-dribbble:before { content: "\f103"; }
+.flaticon-like:before { content: "\f104"; }
+.flaticon-close:before { content: "\f105"; }
+.flaticon-menu:before { content: "\f106"; }
+.flaticon-map:before { content: "\f107"; }
+.flaticon-code:before { content: "\f108"; }
+.flaticon-email:before { content: "\f109"; }
+.flaticon-projects:before { content: "\f10a"; }
+.flaticon-right-arrow:before { content: "\f10b"; }
+.flaticon-left-arrow:before { content: "\f10c"; }
+.flaticon-left-arrow-circle:before { content: "\f10d"; }
+.flaticon-about:before { content: "\f10e"; }
+.flaticon-home:before { content: "\f10f"; }

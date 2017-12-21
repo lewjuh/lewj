@@ -6,10 +6,10 @@
       </li>
     </ul>
     <div v-if="amount > 1" class="prev" v-on:click="prevSlide()">
-      <i class="icon ion-ios-arrow-left"> </i>
+      <i class="flaticon-left-arrow"> </i>
     </div>
     <div v-if="amount > 1" class="next" v-on:click="nextSlide()">
-      <i class="icon ion-ios-arrow-right"> </i>
+      <i class="flaticon-right-arrow"> </i>
     </div>
   </div>
 </template>
@@ -66,106 +66,143 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-  @import '../scss/vars.scss'
-  @import '../scss/mixins.scss'
+<style lang="scss" scoped>
+  @import '../scss/vars.scss';
+  @import '../scss/mixins.scss';
 
-  .slider
-    color: #fff
-    position: relative
-    height: auto
-    max-width: 800px
-    width: 100%
-    overflow: hidden
-    transition-delay: 0s
-    .next
-      position: absolute
-      right: 0
-      top: 0
-      bottom: 0
-      width: 20%
-      font-size: 32px
-      transition: .25s
-      transition-delay: 0s
-      background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(0,0,0,0.56) 100%)
-      background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(0,0,0,0.56) 100%)
-      background: linear-gradient(to right,  rgba(255,255,255,0) 0%, rgba(0,0,0,0.56) 100%)
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#8f000000',GradientType=1 )
-      opacity: 0
-      i
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-        transition: .15s
-        transition-delay: 0s
-      &:hover
-        cursor: pointer
-        color: $third
-        i
-          left: 55%
-    .prev
-      position: absolute
-      left: 0
-      top: 0
-      bottom: 0
-      width: 20%
-      font-size: 32px
-      transition: .25s
-      transition-delay: 0s
-      background: -moz-linear-gradient(left,  rgba(0,0,0,0.56) 0%, rgba(255,255,255,0) 100%)
-      background: -webkit-linear-gradient(left,  rgba(0,0,0,0.56) 0%, rgba(255,255,255,0) 100%)
-      background: linear-gradient(to right,  rgba(0,0,0,0.56) 0%, rgba(255,255,255,0) 100%)
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f000000', endColorstr='#00ffffff',GradientType=1 )
-      opacity: 0
-      i
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-        transition: .15s
-        transition-delay: 0s
-      &:hover
-        cursor: pointer
-        color: $third
-        i
-          left: 45%
-    &:hover
-      .prev
-        opacity: 1
-      .next
-        opacity: 1
-    ul
-      list-style: none
-      margin: 0
-      padding: 0
-      white-space: nowrap
-      text-align: left
-      position: absolute
-      left: 0
-      top: 0
-      transition: left .3s
-      li
-        margin: 0
-        padding: 0
-        display: inline-block
-        img
-          max-width: 800px
-          width: 100%
-    @media screen and (max-width: 800px)
-      padding-top: 75px
-    .hire-wrap
-      width: 85%
-      text-align: center
-    h1
-      text-align: center
-      display: block
-      width: 100%
-      margin: 0 0 25px
-      font-size: 52px
-      font-weight: 200
-      animation-delay: .1s
-      animation-duration: .5s
+  .slider {
+    color: #fff;
+    position: relative;
+    height: auto;
+    max-width: 800px;
+    border-radius: 20px;
+    width: 100%;
+    overflow: hidden;
+    transition-delay: 0s;
 
+    .next {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 20%;
+      font-size: 32px;
+      transition: 0.25s;
+      transition-delay: 0s;
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.56) 100%);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.56) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.56) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#8f000000',GradientType=1 );
+      opacity: 0;
 
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.15s;
+        transition-delay: 0s;
+        &:before {
+          font-size: 32px;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $third;
+
+        i {
+          left: 55%;
+        }
+      }
+    }
+
+    .prev {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 20%;
+      font-size: 32px;
+      transition: 0.25s;
+      background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.56) 0%, rgba(255, 255, 255, 0) 100%);
+      background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.56) 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.56) 0%, rgba(255, 255, 255, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f000000', endColorstr='#00ffffff',GradientType=1 );
+      opacity: 0;
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.15s;
+        &:before {
+          font-size: 32px;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $third;
+
+        i {
+          left: 45%;
+        }
+      }
+    }
+
+    &:hover {
+      .prev {
+        opacity: 1;
+      }
+
+      .next {
+        opacity: 1;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      text-align: left;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: left 0.3s;
+
+      li {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+
+        img {
+          max-width: 800px;
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      padding-top: 75px;
+    }
+
+    .hire-wrap {
+      width: 85%;
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin: 0 0 25px;
+      font-size: 52px;
+      font-weight: 200;
+      animation-delay: 0.1s;
+      animation-duration: 0.5s;
+    }
+  }
 </style>
