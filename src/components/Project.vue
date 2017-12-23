@@ -3,12 +3,12 @@
     <TopNav />
     <div v-if="portfolio.name" class="inner_wrap">
       <h1 class="animated zoomIn"><router-link to="/projects" class="back_button"><i class="flaticon-left-arrow"></i></router-link><span  v-cloak>{{portfolio.name}}</span></h1>
-      <Slider class="images animated zoomIn" v-bind:photos="portfolio.photos"></Slider>
+      <Slider class="images animated zoomIn" v-bind:photos="portfolio.photos" v-bind:aspect="portfolio.aspect"></Slider>
       <div class="technologies">
-        <i v-for="(tech, index) in portfolio.tech" :class="'devicons devicons-'+tech+' animated fadeIn'"><div class="tooltip">{{tech}}</div></i>
+        <i v-for="(tech, index) in portfolio.tech" :class="'devicon devicon-'+tech+'-plain animated fadeIn'"><div class="tooltip">{{tech}}</div></i>
       </div><!--
    --><div class="cta animated fadeIn">
-        <a v-if="portfolio.url !== '#'" :href="portfolio.url" target="_blank">VISIT</a>
+        <a v-if="portfolio.url !== '#'" :href="portfolio.url" target="_blank">VISIT <i class="flaticon-link"></i></a>
       </div>
       <p class="animated fadeIn">
         {{portfolio.desc}}
@@ -214,9 +214,16 @@ export default {
         padding: 12px 32px;
         background: $primary;
         text-decoration: none;
-        border-radius: 2px;
+        border-radius: 6px;
         transition: 0.15s;
         border: 2px solid #fff;
+
+        i {
+          margin-left: 5px;
+          &:before {
+            font-size: 17px;
+          }
+        }
 
         &:hover {
           color: $primary;
@@ -253,64 +260,10 @@ export default {
         animation-delay: 0.4s;
         z-index: 100000;
 
-        &:nth-child(1) {
-          animation-delay: 0.45s;
-        }
-
-        &:nth-child(2) {
-          animation-delay: 0.5s;
-        }
-
-        &:nth-child(3) {
-          animation-delay: 0.55s;
-        }
-
-        &:nth-child(4) {
-          animation-delay: 0.6s;
-        }
-
-        &:nth-child(5) {
-          animation-delay: 0.65s;
-        }
-
-        &:nth-child(6) {
-          animation-delay: 0.7s;
-        }
-
-        &:nth-child(7) {
-          animation-delay: 0.75s;
-        }
-
-        &:nth-child(8) {
-          animation-delay: 0.8s;
-        }
-
-        &:nth-child(9) {
-          animation-delay: 0.85s;
-        }
-
-        &:nth-child(10) {
-          animation-delay: 0.9s;
-        }
-
-        &:nth-child(11) {
-          animation-delay: 0.95s;
-        }
-
-        &:nth-child(12) {
-          animation-delay: 1s;
-        }
-
-        &:nth-child(13) {
-          animation-delay: 1.05s;
-        }
-
-        &:nth-child(14) {
-          animation-delay: 1.1s;
-        }
-
-        &:nth-child(15) {
-          animation-delay: 1.15s;
+        @for $i from 1 through 15 {
+          &:nth-child(#{$i}) {
+            animation-delay: 0.4s + (0.05 * $i);
+          }
         }
 
         .tooltip {

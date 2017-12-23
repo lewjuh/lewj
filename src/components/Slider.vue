@@ -1,8 +1,8 @@
 <template>
-  <div class="slider" :ref="'slider_wrap'" v-bind:style="{ height: imgWidth + 'px' }">
+  <div class="slider" :ref="'slider_wrap'" v-bind:style="{ height: aspect==='16:9' ? (imgWidth * 0.56) + 'px' : imgWidth + 'px'}">
     <ul v-bind:style="{ left: currentPos + 'px' }" :ref="'slider_bar'">
       <li v-for="(photo, index) in photos" :ref="'photo_'+index">
-        <img :src="photo" class="slide_img"  v-bind:style="{ height: imgWidth + 'px', width: imgWidth + 'px' }" />
+        <img :src="photo" class="slide_img"  v-bind:style="{ width: imgWidth + 'px' }" />
       </li>
     </ul>
     <div v-if="amount > 1" class="prev" v-on:click="prevSlide()">
@@ -17,13 +17,14 @@
 <script>
 export default {
   name: 'slider',
-  props: ['photos'],
+  props: ['photos', 'aspect'],
   data () {
     return {
       amount: this.photos.length,
       currentSlide: 1,
       currentPos: 0,
-      imgWidth: 0
+      imgWidth: 0,
+      imgHeight: 0
     }
   },
   methods: {

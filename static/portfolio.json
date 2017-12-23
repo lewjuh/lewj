@@ -1,5 +1,146 @@
 {
   "portfolio": [{
+      "name": "Greenpeace",
+      "slug": "greenpeace",
+      "type": "Petition mini-site",
+      "main_photo": "../../../static/images/greenpeace/slide1.jpg",
+      "photos": [
+        "../../../static/images/greenpeace/slide1.jpg",
+        "../../../static/images/greenpeace/slide2.jpg",
+        "../../../static/images/greenpeace/slide3.jpg",
+        "../../../static/images/greenpeace/slide4.jpg"
+      ],
+      "aspect": "16:9",
+      "tech": [
+        "javascript",
+        "html5",
+        "sass"
+      ],
+      "desc": "Project managed and designed by ForwardAction. Creating this website was a big fun challenge. It had to be created in the Engaging Networks CMS, which is far from modern, so it had to be very editable from the backend UI, as well as fully capture the clients design. Greenpeace wanted it to be very accessible and mobile friendly, but also on desktop and tablet, wanted the effect of traveling up from the bottom of the ocean. The client had a design company send over a transition animation video which they wanted to try and recreate, so I was set with the task of transforming it from video to CSS/JS, which was incredible fun! Adding in some other animations for UI elements, this page came out really well.",
+      "url": "https://act.greenpeace.org/page/17672/petition/1"
+    }, {
+        "name": "Colony",
+        "slug": "colony",
+        "type": "Website",
+        "main_photo": "../../../static/images/colony/slide1.jpg",
+        "photos": [
+          "../../../static/images/colony/slide1.jpg",
+          "../../../static/images/colony/slide2.jpg",
+          "../../../static/images/colony/slide3.jpg",
+          "../../../static/images/colony/slide4.jpg"
+        ],
+        "aspect": "16:9",
+        "tech": [
+          "javascript",
+          "html5",
+          "sass",
+          "vuejs"
+        ],
+        "desc": "I had a lot of creative freedom with this website, and it was a joy to make in Vue.js. The client wanted a fairly flashy website that represented their ideology and style. With lots of transition animations and subtle design features, I was very pleased with how this website came out.",
+        "url": "http://www.colonykl.com/"
+      },  {
+        "name": "Unions Together & Labour",
+        "slug": "unions-together-labour",
+        "type": "Voting reminder mini-site",
+        "main_photo": "../../../static/images/unions/firstslide.jpg",
+        "photos": [
+          "../../../static/images/unions/firstslide.jpg",
+          "../../../static/images/unions/slide2.jpg",
+          "../../../static/images/unions/slide3.jpg",
+          "../../../static/images/unions/slide4.jpg",
+          "../../../static/images/unions/slide5.jpg",
+          "../../../static/images/unions/slide6.jpg"
+        ],
+        "aspect": "16:9",
+        "tech": [
+          "javascript",
+          "html5",
+          "sass",
+          "vuejs"
+        ],
+        "desc": "Project managed and designed by ForwardAction. Built in Vue.js with help from Sass, this was a really fun project to work on. It had a few challenges with the way the reminder form worked, as well as learning more about Vue, overall I think it turned out great.",
+        "url": "https://www.lewj.ninja/unions/"
+      }, {
+        "name": "Reprieve",
+        "slug": "reprieve",
+        "type": "Petition mini-site",
+        "main_photo": "../../../static/images/reprieve/main.jpg",
+        "photos": [
+          "../../../static/images/reprieve/main.jpg",
+          "../../../static/images/reprieve/slide2.jpg",
+          "../../../static/images/reprieve/slide3.jpg",
+          "../../../static/images/reprieve/slide4.jpg",
+          "../../../static/images/reprieve/slide5.jpg",
+          "../../../static/images/reprieve/slide6.jpg"
+        ],
+        "aspect": "16:9",
+        "tech": [
+          "javascript",
+          "css3",
+          "html5"
+        ],
+        "desc": "Project managed and designed by ForwardAction. This project was a fairly big CSS challenge. Getting the borders, background, see through text and logo positioning just right in a responsive way was a lot of fun to overcome.",
+        "url": "https://www.lewj.ninja/reprieve/"
+      }, {
+        "name": "Amnesty International",
+        "slug": "amnesty-international",
+        "type": "Petition mini-site",
+        "main_photo": "../../../static/images/amnesty/slide1.jpg",
+        "photos": [
+          "../../../static/images/amnesty/slide1.jpg",
+          "../../../static/images/amnesty/pic1.jpg",
+          "../../../static/images/amnesty/pic2.jpg",
+          "../../../static/images/amnesty/pic3.jpg"
+        ],
+        "aspect": "16:9",
+        "tech": [
+          "javascript",
+          "css3",
+          "html5"
+        ],
+        "desc": "Project managed and designed by ForwardAction. This project had some very unique requirements. First the we had to detect whether the user was from mainland UK or Nothern Ireland in order to show them different things. I then created 2 geofences, one around the mainland and one around nothern ireland, in order to get accurate distance calculations as the crow flies to either land mass. This was a very fun challenge, made possible with a combination of google maps and some head scratching.",
+        "url": "#"
+      }, {
+      "name": "Wateraid",
+      "slug": "wateraid",
+      "type": "Petition mini-site",
+      "main_photo": "../../../static/images/wateraid/firstslide.jpg",
+      "photos": [
+        "../../../static/images/wateraid/firstslide.jpg",
+        "../../../static/images/wateraid/slide2.jpg",
+        "../../../static/images/wateraid/slide3.jpg",
+        "../../../static/images/wateraid/slide4.jpg"
+      ],
+      "aspect": "16:9",
+      "tech": [
+        "javascript",
+        "html5",
+        "sass"
+      ],
+      "desc": "Project managed and designed by ForwardAction.",
+      "url": "#"
+    }, {
+      "name": "Alzheimers Society",
+      "slug": "alzheimers-society",
+      "type": "Petition mini-site",
+      "main_photo": "../../../static/images/alzheimers/firstslide.jpg",
+      "photos": [
+        "../../../static/images/alzheimers/firstslide.jpg",
+        "../../../static/images/alzheimers/slide2.jpg",
+        "../../../static/images/alzheimers/slide3.jpg",
+        "../../../static/images/alzheimers/slide4.jpg",
+        "../../../static/images/alzheimers/slide5.jpg",
+        "../../../static/images/alzheimers/slide6.jpg"
+      ],
+      "aspect": "16:9",
+      "tech": [
+        "javascript",
+        "html5",
+        "sass"
+      ],
+      "desc": "Project managed and designed by ForwardAction. Having to be built into Engaging Networks CMS, this was a challenge in itself. A lot of JavaScript magic had to be used in order to get things looking and functioning just right. And with over 20,000 signatures, it has been very successful!",
+      "url": "https://e-activist.com/page/17402/data/1"
+    }, {
       "name": "Dev Helpers",
       "slug": "dev-helpers",
       "type": "Chrome Extension",
@@ -136,24 +277,6 @@
       ],
       "desc": "Built using React",
       "url": "http://unveilatelier.com"
-    },
-    {
-      "name": "RivalTide",
-      "slug": "rivaltide",
-      "type": "Design & Development",
-      "main_photo": "../../../static/images/rivaltide/rivaltide.jpg",
-      "photos": [
-        "../../../static/images/rivaltide/rivaltide.jpg"
-      ],
-      "tech": [
-        "javascript",
-        "css3",
-        "html5",
-        "photoshop",
-        "wordpress"
-      ],
-      "desc": "Full WordPress theme for a Gaming news and review site.",
-      "url": "#"
     }
   ]
 }

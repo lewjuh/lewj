@@ -92,6 +92,9 @@ export default {
           transition: 0.3s;
           animation-duration: 0.5s;
           animation-delay: 0.4s;
+          width: 100%;
+          max-width: 350px;
+          margin: 20px;
 
           @for $i from 1 through 20 {
             &:nth-child(#{$i}) {
@@ -102,8 +105,8 @@ export default {
 
         .project {
           max-width: 350px;
-          max-height: 350px;
-          margin: 20px;
+          width: 100%;
+          padding-top: 75%;
           position: relative;
           border-radius: 20px;
           overflow: hidden;
@@ -115,8 +118,24 @@ export default {
           transition: 0.3s;
 
           img {
-            width: 100%;
+            width: 150%;
             height: auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) scale(1);
+            transition: transform 3s;
+          }
+          .technologies {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            color: black;
+            font-size: 26px !important;
+            padding: 10px;
+            box-shadow: 0 -2px 25px rgba(0,0,0,.15);
           }
 
           .hover {
@@ -134,11 +153,13 @@ export default {
             opacity: 0;
             transition: 0.4s;
             line-height: 1;
+            z-index: 1;
 
             h4 {
               font-size: 36px;
               font-weight: 200;
               margin: 0;
+              padding: 0 10px;
               width: 100%;
             }
 
@@ -154,6 +175,10 @@ export default {
             cursor: pointer;
 
             @include longer-boxshadow;
+
+            img {
+              transform: translateX(-50%) scale(1.15);
+            }
 
             .hover {
               opacity: 1;

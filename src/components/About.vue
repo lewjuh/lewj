@@ -163,12 +163,12 @@ export default {
         color: #fff;
         display: inline-block;
         text-decoration: none;
-        border-bottom: 1px solid #fff;
+        border-bottom: 2px solid #fff;
         transition: 0.3s;
 
         &:hover {
           color: rgba(0, 0, 0, 0.7);
-          border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+          border-bottom: 2px solid rgba(0, 0, 0, 0.7);
         }
       }
     }
